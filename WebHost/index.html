@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>PS4 6.72 Jailbreak</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #333;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h3 {
+      color: #d9534f;
+    }
+
+    a {
+      text-decoration: none;
+      color: #337ab7;
+      margin-right: 10px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      background-color: #f8f8f8;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #337ab7;
+      color: white;
+    }
+
+    p,
+    ol {
+      margin: 20px 0;
+    }
+
+    p b {
+      color: #d9534f;
+    }
+
+    p i {
+      color: #5bc0de;
+    }
+
+    #language-switcher {
+      margin-bottom: 20px;
+    }
+
+    #progress {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    ol li {
+      margin-bottom: 15px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .language {
+      display: none;
+    }
+
+    .language.active {
+      display: block;
+    }
+  </style>
+  <script src="exploit.js"></script>
+  <script src="jb.js"></script>
+</head>
+
+<body>
+  <script>
+    function changeLanguage(lang) {
+      const languages = document.querySelectorAll('.language');
+      languages.forEach((element) => {
+        element.classList.remove('active');
+      });
+      if (document.getElementById(lang)) {
+        document.getElementById(lang).classList.add('active');
+      }
+    }
+    // Init on English Language
+    changeLanguage('english');
+  </script>
+
+  <div class="container">
+    <div id="language-switcher">
+      <a href="#" onclick="changeLanguage('english'); return false;">English</a>
+      <a href="#" onclick="changeLanguage('russian'); return false;">Русский</a>
+    </div>
+
+    <div id="english" class="language active">
+      <h3>READ THIS CAREFULLY BEFORE PROCEEDING</h3>
+      <p>
+        Created By Rami aka Khalid, This Will only Work for PS4 whose System Firmware is on 6.72.!! Run the Jailbreak.
+      </p>
+    </div>
+
+    <div id="russian" class="language"><h3>TO BE ADDED</h3></div>
+
+    <div id="payloads">
+      <a type="button" onclick="doJailbreak()">TEST JAILBREAK</a>
+    </div>
+</body>
+
+</html>
